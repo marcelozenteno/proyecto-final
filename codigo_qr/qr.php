@@ -11,7 +11,7 @@ $filename = $dir.'test.png';
 $tamanio = 10;
 $level = 'H';
 $frameSize = 5;
-$contenido = 'Registro Exitoso';
+$contenido = ' Exitoso';
 
 QRcode::png($contenido, $filename, $level, $tamanio, $frameSize);
 
