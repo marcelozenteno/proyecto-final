@@ -1221,6 +1221,10 @@
                                     </tbody>
                                  </table>
                               </div>
+
+
+
+
                               <!-- END table-responsive-->
                               <div class="panel-footer text-right">
                                  <a href="#">
@@ -1233,6 +1237,8 @@
                      </div>
                      <!-- END table-->
                   </div>
+
+                  
                   <!-- END dashboard main content-->
                   <!-- START dashboard sidebar-->
                <!--<div class="col-md-3">

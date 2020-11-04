@@ -377,54 +377,155 @@
                   </ul>
                   <!-- END SubMenu item-->
                </li>
+               
                <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-table"></em>
-                     <span class="item-text">Listado</span>
+                     <em class="fa fa-users"></em>
+                     <span class="item-text">Socios</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse">
                      <li>
                         <a href="<?php echo base_url(); ?>index.php/usuarios/listaSocio" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Socios</span>
+                           <span class="item-text">Listado</span>
                         </a>
                      </li>
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/listaPersonal" title="Data Table" data-toggle="" class="no-submenu">
-                           <span class="item-text">Empleado</span>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Formulario de socio" data-toggle="" class="no-submenu">
+                           <span class="item-text">Formulario</span>
                         </a>
                      </li>
-                    <!-- <li>
-                        <a href="<?php echo base_url(); ?>47admin/table-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Extended</span>
+                     
+
+                  </ul>
+               </li>
+
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-male"></em>
+                     <span class="item-text">Personal</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse">
+
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/listaPersonal" title="Data Table" data-toggle="" class="no-submenu">
+                           <span class="item-text">Listado</span>
                         </a>
-                     </li>-->
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/formPersonal" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                           <div class="label label-primary pull-right"></div>
+                           <span class="item-text">Formulario</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-truck"></em>
+                     <span class="item-text">Vehiculos</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu">
+                        <span class="item-text">Listado</span>
+                     </a>
+                  </li>
+                  
+               </ul>
+               <!-- END SubMenu item-->
+            </li>
+            <li>
+               <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <em class="fa fa-map-marker"></em>
+                  <span class="item-text">Paradas</span>
+               </a>
+               <!-- START SubMenu item-->
+               <ul class="nav collapse ">
+                <li>
+                  <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <span class="item-text">Formulario</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <div class="label label-primary pull-right"></div>
+                     <span class="item-text">Listado</span>
+                  </a>
+               </li>
+               </ul>
+               <!-- END SubMenu item-->
+            </li>
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-exchange"></em>
+                     <span class="item-text">Rutas</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Formulario</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                        <div class="label label-primary pull-right"></div>
+                        <span class="item-text">Listado</span>
+                     </a>
+                  </li>
+                     
+                  </ul>
+                  <!-- END SubMenu item-->
+               </li>
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-exclamation-circle"></em>
+                     <span class="item-text">Observaciones</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Calificaciones</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                        <div class="label label-primary pull-right"></div>
+                        <span class="item-text">Reclamos</span>
+                     </a>
+                  </li>
+                     
                   </ul>
                   <!-- END SubMenu item-->
                </li>
                <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-edit"></em>
-                     <span class="item-text">Formulario</span>
+                     <em class="fa fa-clock-o"></em>
+                     <span class="item-text">Tiempos</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Standard" data-toggle="" class="no-submenu">
-                        <span class="item-text">Socio</span>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Listado</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formPersonal" title="Extended" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
-                        <span class="item-text">Empleado</span>
+                        <span class="item-text">Formulario</span>
                      </a>
                   </li>
-                     <!--<li>
-                        <a href="<?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Validation</span>
-                        </a>
-                     </li>-->
+                     
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -434,81 +535,7 @@
                      <span class="item-text">Elements</span>
                   </a>-->
                   <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/panels.html" title="Panels" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">new</div>
-                           <span class="item-text">Panels</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/portlets.html" title="Portlets" data-toggle="" class="no-submenu">
-                           <span class="item-text">Portlets</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/button.html" title="Buttons" data-toggle="" class="no-submenu">
-                           <span class="item-text">Buttons</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/icons.html" title="Icons" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">+400</div>
-                           <span class="item-text">Icons</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/notifications.html" title="Notifications" data-toggle="" class="no-submenu">
-                           <span class="item-text">Notifications</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/typo.html" title="Typography" data-toggle="" class="no-submenu">
-                           <span class="item-text">Typography</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/grid.html" title="Grid" data-toggle="" class="no-submenu">
-                           <span class="item-text">Grid</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/grid-masonry.html" title="Grid Masonry" data-toggle="" class="no-submenu">
-                           <span class="item-text">Grid Masonry</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/animations.html" title="Animations" data-toggle="" class="no-submenu">
-                           <span class="item-text">Animations</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/dropdown-animations.html" title="Dropdown" data-toggle="" class="no-submenu">
-                           <span class="item-text">Dropdown</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/widgets.html" title="Widgets" data-toggle="" class="no-submenu">
-                           <span class="item-text">Widgets</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/maps.html" title="Maps" data-toggle="" class="no-submenu">
-                           <span class="item-text">Maps</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/calendar.html" title="Calendar" data-toggle="" class="no-submenu">
-                           <span class="item-text">Calendar</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/spinners.html" title="Spinners" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">new</div>
-                           <span class="item-text">Spinners</span>
-                        </a>
-                     </li>
-                  </ul>
+                  
                   <!-- END SubMenu item-->
                   <!--</li>-->
               <!-- <li>
