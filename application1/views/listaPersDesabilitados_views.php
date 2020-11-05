@@ -1,31 +1,36 @@
  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-  ?>
+ ?>
  <section class="wrapper">
-      <!-- START Top Navbar-->
-      <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
-         <!-- START navbar header-->
-         <div class="navbar-header" style="background-color:#2C7873">
-            <a href="<?php echo base_url(); ?>47admin/#" class="navbar-brand">
-               <div class="brand-logo">LINEA P</div>
-               <div class="brand-logo-collapsed">P</div>
-            </a>
-         </div>
-         <!-- END navbar header-->
-         <!-- START Nav wrapper-->
-         <div class="nav-wrapper" style="background-color:#6FB98F">
-            <!-- START Left navbar-->
+   <!-- START Top Navbar-->
+   <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
+      <!-- START navbar header-->
+      <div class="navbar-header" style="background-color:#2C7873">
+         <a href="<?php echo base_url(); ?>47admin/#" class="navbar-brand">
+            <div class="brand-logo">LINEA P</div>
+            <div class="brand-logo-collapsed">P</div>
+         </a>
+      </div>
+      <!-- END navbar header-->
+      <!-- START Nav wrapper-->
+      <div class="nav-wrapper" style="background-color:#6FB98F">
+         <!-- START Left navbar-->
+         <ul class="nav navbar-nav">
+            <li>
+               <a href="<?php echo base_url(); ?>47admin/#a" data-toggle="aside">
+                  <em class="fa fa-align-left"></em>
+               </a>
+            </li></ul>
             <ul class="nav navbar-nav">
-               <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" data-toggle="aside">
-                     <em class="fa fa-align-left"></em>
-                  </a>
-               </li>
+               <li><center>
+                  <h3 style="color:white"> Sindicato mixto de transportes Sebastián Pagador 
+                  </h3>
+
               <!-- <li>
                   <a href="<?php echo base_url(); ?>47admin/#" data-toggle="navbar-search">
                      <em class="fa fa-search"></em>
                   </a>
-               </li>-->
-            </ul>
+               </li>--></center></li>
+            </ul> 
             <!-- END Left navbar-->
             <!-- START Right Navbar-->
             <ul class="nav navbar-nav navbar-right">
@@ -52,97 +57,97 @@
                                        <small class="pull-right">2h</small>
                                        <strong class="media-heading text-primary">
                                           <div class="point point-success point-lg"></div>Sheila Carter</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
+                                          <p class="mb-sm">
+                                             <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
+                                          </p>
+                                       </div>
                                     </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/04.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">3h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-success point-lg"></div>Rich Reynolds</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/03.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Beverley Pierce</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/05.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Perry Cole</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/06.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Carolyn Carpenter</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                           </div>
-                           <!-- END list group-->
-                        </div>
-                     </li>
-                     <!-- START dropdown footer-->
-                     <li class="p">
-                        <a href="<?php echo base_url(); ?>47admin/#" class="text-center">
-                           <small class="text-primary">READ ALL</small>
-                        </a>
-                     </li>
-                     <!-- END dropdown footer-->
-                  </ul>
-                  <!-- END Dropdown menu-->
-               </li>
-               <!-- END Messages menu (dropdown-list)-->
-               <!-- START Alert menu-->
+                                 </a>
+                                 <!-- END list group item-->
+                                 <!-- START list group item-->
+                                 <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
+                                    <div class="media">
+                                       <div class="pull-left">
+                                          <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/04.jpg" alt="Image" class="media-object img-rounded">
+                                       </div>
+                                       <div class="media-body clearfix">
+                                          <small class="pull-right">3h</small>
+                                          <strong class="media-heading text-primary">
+                                             <div class="point point-success point-lg"></div>Rich Reynolds</strong>
+                                             <p class="mb-sm">
+                                                <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <!-- END list group item-->
+                                    <!-- START list group item-->
+                                    <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
+                                       <div class="media">
+                                          <div class="pull-left">
+                                             <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/03.jpg" alt="Image" class="media-object img-rounded">
+                                          </div>
+                                          <div class="media-body clearfix">
+                                             <small class="pull-right">4h</small>
+                                             <strong class="media-heading text-primary">
+                                                <div class="point point-danger point-lg"></div>Beverley Pierce</strong>
+                                                <p class="mb-sm">
+                                                   <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
+                                                </p>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <!-- END list group item-->
+                                       <!-- START list group item-->
+                                       <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
+                                          <div class="media">
+                                             <div class="pull-left">
+                                                <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/05.jpg" alt="Image" class="media-object img-rounded">
+                                             </div>
+                                             <div class="media-body clearfix">
+                                                <small class="pull-right">4h</small>
+                                                <strong class="media-heading text-primary">
+                                                   <div class="point point-danger point-lg"></div>Perry Cole</strong>
+                                                   <p class="mb-sm">
+                                                      <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                          <!-- END list group item-->
+                                          <!-- START list group item-->
+                                          <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
+                                             <div class="media">
+                                                <div class="pull-left">
+                                                   <img style="width: 48px; height: 48px;" src="<?php echo base_url(); ?>47admin/app/img/user/06.jpg" alt="Image" class="media-object img-rounded">
+                                                </div>
+                                                <div class="media-body clearfix">
+                                                   <small class="pull-right">4h</small>
+                                                   <strong class="media-heading text-primary">
+                                                      <div class="point point-danger point-lg"></div>Carolyn Carpenter</strong>
+                                                      <p class="mb-sm">
+                                                         <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
+                                                      </p>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                             <!-- END list group item-->
+                                          </div>
+                                          <!-- END list group-->
+                                       </div>
+                                    </li>
+                                    <!-- START dropdown footer-->
+                                    <li class="p">
+                                       <a href="<?php echo base_url(); ?>47admin/#" class="text-center">
+                                          <small class="text-primary">READ ALL</small>
+                                       </a>
+                                    </li>
+                                    <!-- END dropdown footer-->
+                                 </ul>
+                                 <!-- END Dropdown menu-->
+                              </li>
+                              <!-- END Messages menu (dropdown-list)-->
+                              <!-- START Alert menu-->
                <!--<li class="dropdown dropdown-list">
                   <a href="<?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
                      <em class="fa fa-bell"></em>
@@ -192,42 +197,42 @@
                                     <p class="m0">
                                        <small>There are
                                           <span class="text-primary">2</span>new updates available</small>
-                                    </p>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </a>
+                              <!-- last list item -->
+                              <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
+                                 <small>Unread notifications</small>
+                                 <span class="badge">14</span>
+                              </a>
+                           </div>
+                           <!-- END list group-->
+                        </li>
+                     </ul>
+                     <!-- END Dropdown menu-->
+                  </li>
+                  <!-- END Alert menu-->
+                  <!-- START User menu-->
+                  <li class="dropdown">
+                     <a href="<?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
+                        <em class="fa fa-user"></em>
+                     </a>
+                     <!-- START Dropdown menu-->
+                     <ul class="dropdown-menu">
+                        <li>
+                           <div class="p">
+                              <p>Progreso general</p>
+                              <div class="progress progress-striped progress-xs m0">
+                                 <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-success">
+                                    <span class="sr-only">80% Completo</span>
                                  </div>
                               </div>
-                           </a>
-                           <!-- last list item -->
-                           <a href="<?php echo base_url(); ?>47admin/#" class="list-group-item">
-                              <small>Unread notifications</small>
-                              <span class="badge">14</span>
-                           </a>
-                        </div>
-                        <!-- END list group-->
-                     </li>
-                  </ul>
-                  <!-- END Dropdown menu-->
-               </li>
-               <!-- END Alert menu-->
-               <!-- START User menu-->
-               <li class="dropdown">
-                  <a href="<?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
-                     <em class="fa fa-user"></em>
-                  </a>
-                  <!-- START Dropdown menu-->
-                  <ul class="dropdown-menu">
-                     <li>
-                        <div class="p">
-                           <p>Progreso general</p>
-                           <div class="progress progress-striped progress-xs m0">
-                              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-success">
-                                 <span class="sr-only">80% Completo</span>
-                              </div>
                            </div>
-                        </div>
-                     </li>
-                     <li class="divider"></li>
-                     <li><a href="<?php echo base_url(); ?>47admin/#">Perfil</a>
-                     </li>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="<?php echo base_url(); ?>47admin/#">Perfil</a>
+                        </li>
                      <!-- <li><a href="<?php echo base_url(); ?>47admin/#">Settings</a>
                      </li>
                      <li><a href="<?php echo base_url(); ?>47admin/#">Notifications<div class="label label-info pull-right">5</div></a>
@@ -282,7 +287,7 @@
                      <div class="user-block-info">
                         <input type="hidden" name="idusu" value="<?php echo $this->session->userdata('idEmpleado') ?>">
                         <span class="user-block-name item-text"><?php echo $this->session->userdata('login') ?></span>
-                        <span class="user-block-role"><?php echo $this->session->userdata('tipo') ?></span>
+                        <span class="user-block-role"><?php echo $this->session->userdata('cargo') ?></span>
                         <!-- START Dropdown to change status-->
                         <div class="btn-group user-block-status">
                            <button type="button" data-toggle="dropdown" data-play="fadeIn" data-duration="0.2" class="btn btn-xs dropdown-toggle">
@@ -307,7 +312,8 @@
                   </div>
                   <!-- START User links collapse-->
                   <ul class="nav collapse" >
-                     <li><a href="<?php echo base_url(); ?>47admin/#">Perfil</a>
+                     <li><a href="<?php echo base_url(); ?>index.php/usuarios/perfilEmpleado?id=<?php echo $this->session->userdata('idEmpleado') ?>">Perfil</a>
+
                      </li>
                     <!-- <li><a href="<?php echo base_url(); ?>47admin/#">Settings</a>
                      </li>
@@ -371,54 +377,155 @@
                   </ul>
                   <!-- END SubMenu item-->
                </li>
+               
                <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-table"></em>
-                     <span class="item-text">Listado</span>
+                     <em class="fa fa-users"></em>
+                     <span class="item-text">Socios</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse">
                      <li>
                         <a href="<?php echo base_url(); ?>index.php/usuarios/listaSocio" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Socios</span>
+                           <span class="item-text">Listado</span>
                         </a>
                      </li>
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/listaPersonal" title="Data Table" data-toggle="" class="no-submenu">
-                           <span class="item-text">Personal</span>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Formulario de socio" data-toggle="" class="no-submenu">
+                           <span class="item-text">Formulario</span>
                         </a>
                      </li>
-                    <!-- <li>
-                        <a href="<?php echo base_url(); ?>47admin/table-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Extended</span>
+                     
+
+                  </ul>
+               </li>
+
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-male"></em>
+                     <span class="item-text">Personal</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse">
+
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/listaPersonal" title="Data Table" data-toggle="" class="no-submenu">
+                           <span class="item-text">Listado</span>
                         </a>
-                     </li>-->
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/formPersonal" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                           <div class="label label-primary pull-right"></div>
+                           <span class="item-text">Formulario</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-truck"></em>
+                     <span class="item-text">Vehiculos</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu">
+                        <span class="item-text">Listado</span>
+                     </a>
+                  </li>
+                  
+               </ul>
+               <!-- END SubMenu item-->
+            </li>
+            <li>
+               <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <em class="fa fa-map-marker"></em>
+                  <span class="item-text">Paradas</span>
+               </a>
+               <!-- START SubMenu item-->
+               <ul class="nav collapse ">
+                <li>
+                  <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <span class="item-text">Formulario</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <div class="label label-primary pull-right"></div>
+                     <span class="item-text">Listado</span>
+                  </a>
+               </li>
+               </ul>
+               <!-- END SubMenu item-->
+            </li>
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-exchange"></em>
+                     <span class="item-text">Rutas</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Formulario</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                        <div class="label label-primary pull-right"></div>
+                        <span class="item-text">Listado</span>
+                     </a>
+                  </li>
+                     
+                  </ul>
+                  <!-- END SubMenu item-->
+               </li>
+
+               <li>
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-exclamation-circle"></em>
+                     <span class="item-text">Observaciones</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Calificaciones</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                        <div class="label label-primary pull-right"></div>
+                        <span class="item-text">Reclamos</span>
+                     </a>
+                  </li>
+                     
                   </ul>
                   <!-- END SubMenu item-->
                </li>
                <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-edit"></em>
-                     <span class="item-text">Formulario</span>
+                     <em class="fa fa-clock-o"></em>
+                     <span class="item-text">Tiempos</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
-                    <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Socio</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/formPersonal" title="Extended" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right"></div>
-                           <span class="item-text">Personal</span>
-                        </a>
-                     </li>
-                     <!--<li>
-                        <a href="<?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Validation</span>
-                        </a>
-                     </li>-->
+                   <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Listado</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                        <div class="label label-primary pull-right"></div>
+                        <span class="item-text">Formulario</span>
+                     </a>
+                  </li>
+                     
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -428,83 +535,9 @@
                      <span class="item-text">Elements</span>
                   </a>-->
                   <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/panels.html" title="Panels" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">new</div>
-                           <span class="item-text">Panels</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/portlets.html" title="Portlets" data-toggle="" class="no-submenu">
-                           <span class="item-text">Portlets</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/button.html" title="Buttons" data-toggle="" class="no-submenu">
-                           <span class="item-text">Buttons</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/icons.html" title="Icons" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">+400</div>
-                           <span class="item-text">Icons</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/notifications.html" title="Notifications" data-toggle="" class="no-submenu">
-                           <span class="item-text">Notifications</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/typo.html" title="Typography" data-toggle="" class="no-submenu">
-                           <span class="item-text">Typography</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/grid.html" title="Grid" data-toggle="" class="no-submenu">
-                           <span class="item-text">Grid</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/grid-masonry.html" title="Grid Masonry" data-toggle="" class="no-submenu">
-                           <span class="item-text">Grid Masonry</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/animations.html" title="Animations" data-toggle="" class="no-submenu">
-                           <span class="item-text">Animations</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/dropdown-animations.html" title="Dropdown" data-toggle="" class="no-submenu">
-                           <span class="item-text">Dropdown</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/widgets.html" title="Widgets" data-toggle="" class="no-submenu">
-                           <span class="item-text">Widgets</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/maps.html" title="Maps" data-toggle="" class="no-submenu">
-                           <span class="item-text">Maps</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/calendar.html" title="Calendar" data-toggle="" class="no-submenu">
-                           <span class="item-text">Calendar</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="<?php echo base_url(); ?>47admin/spinners.html" title="Spinners" data-toggle="" class="no-submenu">
-                           <div class="label label-primary pull-right">new</div>
-                           <span class="item-text">Spinners</span>
-                        </a>
-                     </li>
-                  </ul>
+                  
                   <!-- END SubMenu item-->
-             <!--</li>-->
+                  <!--</li>-->
               <!-- <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Pages" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-file-text"></em>
@@ -555,30 +588,30 @@
                      </li>
                   </ul>
                   <!-- END SubMenu item-->
-               <!--</li>-->
-               <!-- END Menu-->
-               <!-- Sidebar footer    -->
-               <li class="nav-footer">
-                  <div class="nav-footer-divider"></div>
-                  <!-- START button group-->
-                  <div class="btn-group text-center">
-                     <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
-                        <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
-                        </em>
-                     </button>
-                     <button type="button" data-toggle="tooltip" data-title="Settings" class="btn btn-link">
-                        <em class="fa fa-cog text-muted"></em>
-                     </button>
-                     <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
-                        <em class="fa fa-sign-out text-muted"></em>
-                     </button>
-                  </div>
-                  <!-- END button group-->
-               </li>
-            </ul>
-         </nav>
-         <!-- END Sidebar (left)-->
-      </aside>
+                  <!--</li>-->
+                  <!-- END Menu-->
+                  <!-- Sidebar footer    -->
+                  <li class="nav-footer">
+                     <div class="nav-footer-divider"></div>
+                     <!-- START button group-->
+                     <div class="btn-group text-center">
+                        <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
+                           <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
+                           </em>
+                        </button>
+                        <button type="button" data-toggle="tooltip" data-title="Settings" class="btn btn-link">
+                           <em class="fa fa-cog text-muted"></em>
+                        </button>
+                        <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
+                           <em class="fa fa-sign-out text-muted"></em>
+                        </button>
+                     </div>
+                     <!-- END button group-->
+                  </li>
+               </ul>
+            </nav>
+            <!-- END Sidebar (left)-->
+         </aside>
       <!-- End aside-->
       <!-- START aside-->
       

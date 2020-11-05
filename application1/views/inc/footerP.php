@@ -107,6 +107,7 @@ google.maps.event.trigger(marker,'click');
 <!-- START Scripts-->
 <!-- Main vendor Scripts-->
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script> -->
+
 <script src="<?php echo base_url(); ?>47admin/vendor/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>47admin/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!-- Plugins-->
