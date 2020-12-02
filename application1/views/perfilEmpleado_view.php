@@ -807,7 +807,7 @@
                                     <h3 class="mt0"><?php echo $row->apellidoPaterno; ?>&nbsp;<?php echo $row->nombres; ?></h3>
                                     <ul class="list-unstyled">
                                        <li class="mb-sm">
-                                          <em class="fa fa-map-marker fa-fw"></em><?php echo $row->ciudad; ?>, Bolivia</li>
+                                          <em class="fa fa-map-marker fa-fw"></em>Cochabamba, Bolivia</li>
                                           <li class="mb-sm">
                                              <em class="fa fa-phone fa-fw"></em><?php echo $row->celular; ?></li>
                                              <li class="mb-sm">

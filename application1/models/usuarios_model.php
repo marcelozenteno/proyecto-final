@@ -5,7 +5,8 @@ class Usuarios_model extends CI_Model {
 	public function validarUsuario($login,$password)
 	{
 		$this->db->select('*');
-		$this->db->from('empleado');
+		$this->db->from('empleado e');
+		$this->db->join('cargo c','e.idCargo = c.idCargo');
 		$this->db->where('login',$login);
 		$this->db->where('password',$password);
 		return $this->db->get();
@@ -41,6 +42,7 @@ public function validarPersona($ci)
 		$this->db->select('*');
 		$this->db->from('empleado e');
 		$this->db->join('persona p','e.idPersona = p.idPersona');
+		$this->db->join('cargo c','e.idCargo = c.idCargo');
 		$this->db->where('e.idEmpleado',$id);
 		return $this->db->get();
 	}
