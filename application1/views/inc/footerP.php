@@ -1,102 +1,140 @@
 <script>
-                                 var marker;
-                                 var coords={};
-
-                                 //Funcion principal
-                                 initMap = function () 
-                                 {
+ var marker;
+ var coords={};
+ 
+//Funcion principal
+initMap = function () 
+{
 
  //usamos la API para geolocalizar el usuario
  navigator.geolocation.getCurrentPosition(
-    function (position){
-      coords =  {
-        lng: position.coords.longitude,
-        lat: position.coords.latitude
-     };
+  function (position){
+    coords =  {
+      lng: position.coords.longitude,
+      lat: position.coords.latitude,
+      
+    };
+         setMapa1(coords);  //pasamos las coordenadas al metodo para crear el mapa
+         
+
+       },function(error){console.log(error);});
+
+ navigator.geolocation.getCurrentPosition(
+  function (position){
+    coords =  {
+      lng: position.coords.longitude,
+      lat: position.coords.latitude,
+      
+    };
          setMapa(coords);  //pasamos las coordenadas al metodo para crear el mapa
          
 
-      },function(error){console.log(error);});
+       },function(error){console.log(error);});
  
 }
 
 
 
-function setMapa (coords)
+function setMapa1 (coords)
 {   
-   //Se crea una nueva instancia del objeto mapa
+  
    var map = new google.maps.Map(document.getElementById('map'),
    {
      zoom:18,
      center:new google.maps.LatLng(coords.lat,coords.lng),
 
-  });
+   });
 
-   //Creamos el marcador en el mapa con sus propiedades
-   //para nuestro obetivo tenemos que poner el atributo draggable en true
-   //position pondremos las mismas coordenas que obtuvimos en la geolocalización
    marker = new google.maps.Marker({
      map: map,
      draggable: true,
      animation: google.maps.Animation.DROP,
      position: new google.maps.LatLng(coords.lat,coords.lng),
 
-  });
-   //agregamos un evento al marcador junto con la funcion callback al igual que el evento dragend que indica 
-   //cuando el usuario a soltado el marcadors
+   });
+   
    marker.addListener('click', toggleBounce);
    
    marker.addListener( 'dragend', function (event)
    {
-     //escribimos las coordenadas de la posicion actual del marcador dentro del input #coords
+  
      document.getElementById("coorLongitud").value = this.getPosition().lat();+","
      document.getElementById("coorLatitud").value = this.getPosition().lng();
-  });
-}
+   });
+ }
 
-//callback al hacer clic en el marcador lo que hace es quitar y poner la animacion BOUNCE
+
+
+
+
+ var marker1;
+ var coords={};
+ var marker2;
+//Funcion principal
+ 
+
+
+
+function setMapa (coords)
+{   
+  
+   var map2 = new google.maps.Map(document.getElementById('map2'),
+   {
+     zoom:18,
+     center:new google.maps.LatLng(coords.lat,coords.lng),
+     center:new google.maps.LatLng(coords.lat,coords.lng),
+   });
+
+   marker1 = new google.maps.Marker({
+     map: map2,
+     draggable: true,
+     animation: google.maps.Animation.DROP,
+     position: new google.maps.LatLng(coords.lat,coords.lng),
+   });
+
+   marker2 = new google.maps.Marker({
+     map: map2,
+     draggable: true,
+     animation: google.maps.Animation.DROP,
+     position: new google.maps.LatLng(coords.lat,coords.lng),
+   });
+   
+   marker1.addListener('click', toggleBounce);
+   
+   marker1.addListener( 'dragend', function (event)
+   {
+  
+     document.getElementById("coorLongitudI").value = this.getPosition().lat();+","
+     document.getElementById("coorLatitudI").value = this.getPosition().lng();
+   });
+
+   marker2.addListener('click', toggleBounce);
+   
+   marker2.addListener( 'dragend', function (event)
+   {
+  
+     document.getElementById("coorLongitudF").value = this.getPosition().lat();+","
+     document.getElementById("coorLatitudF").value = this.getPosition().lng();
+   });
+ }
+
 function toggleBounce() {
-if (marker.getAnimation() !== null) {
- marker.setAnimation(null);
-} else {
- marker.setAnimation(google.maps.Animation.BOUNCE);
-}
+  if (marker1.getAnimation() !== null) {
+   marker1.setAnimation(null);
+ } else {
+   marker1.setAnimation(google.maps.Animation.BOUNCE);
+ }
+ if (marker2.getAnimation() !== null) {
+   marker2.setAnimation(null);
+ } else {
+   marker2.setAnimation(google.maps.Animation.BOUNCE);
+ }
 }
 </script>
 
-<!-- 
-<script type="text/javascript">
- var divmapa =document.getElementById("map");
-// Initialize and add the map
-function initMap() {
-
-var options={
- zoom:13,
- center:{lat: -17.400717, lng: -66.153293},
- mapTypeId: 'roadmap'
-}
-//mapa
-var map=new google.maps.Map(divmapa,options);
-//marcador
-var joyeria = {lat: -17.400717, lng: -66.153293};
-var marker = new google.maps.Marker({
- position: joyeria,
-  map: map,
-  icon:'joyeria.png'
-});
-var infoWindow=new google.maps.InfoWindow({
-  content:'<h1>Joyeria Muriel</h1>'
-});
-marker.addListener('click',function(){
-  infoWindow.open(map,marker);
-});
-google.maps.event.trigger(marker,'click');
-}
- </script>-->
-
- <script defer
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyButc2tCHI9GUT-lSddI92N62wXt-V2Iww&callback=initMap">
- </script> 
+<script defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyButc2tCHI9GUT-lSddI92N62wXt-V2Iww&callback=initMap">
+</script> 
 
 
 
@@ -144,7 +182,7 @@ google.maps.event.trigger(marker,'click');
 <script src="<?php echo base_url(); ?>sweetAlert/dist/sweetalert2.min.js"></script>
 <!-- <script src="<?php echo base_url(); ?>jquery/jquery.min.js"></script> -->
 <!-- <script src="<?php echo base_url(); ?>jquery/validacion.js"></script> -->
-<!-- <script>
+ <script>
 function pasarid(idPersona){
    $('#txtid').val(idPersona);
 };
@@ -166,7 +204,7 @@ $(document).ready(function(){
       }
    });
 })
-</script> -->
+</script> 
 
 <script></script>
 </body>

@@ -938,241 +938,158 @@
          </aside>
          <!-- END aside-->
          <!-- START Main section-->
-      <section><!--////////////////
-         <!-- START Page content-->
-         <section class="main-content">
+         <section>
+            <!-- START Page content-->
+            <section class="main-content">
 
-            <!-- START DATATABLE 1 -->
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="panel panel-default">
-
-                    <legend><center><h2>Listado de vehiculos activos</h2></center></legend>
-
-
-                    <div class="panel-body">
-                     <table id="datatable1"  class="table table-striped table-hover">
-                        <thead>
-
-                           <div class="panel panel-default panel-demo">
-                                    <div class="panel-heading">Codigo QR generado
-                                       <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right">
-                                          <em class="fa fa-times"></em>
-                                       </a>
-                                       <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
-                                          <em class="fa fa-minus"></em>
-                                       </a>
-
-                                    </div>
-                                    <div class="panel-body">
-                                       <center><p><?php if(isset($qr_image)){ ?>
-                                          <img src="<?php echo base_url(); ?>codigo_qr/temp/vehiculo/<?php echo $qr_image; ?>">
-                                          <?php } ?></p></center>
-                                       </div>
-                                    </div>
-
-                           <tr>
-                              <th>No.</th>
-                              <th>Placa</th>
-                              <th>Tipo de Vehiculo</th>
-                              <th>Inspeccion</th>
-                                                           
-                              <th>Foto</th>
-                              <th>Generar</th>
-                              <th>Modificar</th>
-                              <th>Desabilitar</th>
-                                 <!--<th class="sort-numeric">Engine version</th>
-                                    <th class="sort-alpha">CSS grade</th>-->
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <?php
-                                 $indice=1;
-                                 foreach ($vehiculo->result() as $row)
-                                 {
-                                    ?>
-                                    <tr>
-                                       <td><?php echo $indice; ?></td>
-                                       <td><?php echo $row->placa; ?></td>
-                                       <td><?php echo $row->tipo; ?></td>
-                                       <td><?php echo $row->inspeccion; ?></td>
-                                                                            
-                                       <td>
-                                         <!-- Contact avatar-->
-                                         <img src="<?php echo base_url() ?>uploads/vehiculos/<?php echo $row->fotoV; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-
-                                         </td>
-                                         <td>
-
-                                             <?php
-                                             $atributos = array('class' => 'form-group');
-                                             echo form_open_multipart('usuarios/generarV',$atributos); ?>
-                                             <input type="hidden" name="idVehiculo" value="<?php echo $row->idVehiculo ?>">
-                                              <input type="hidden" name="placaV" value="<?php echo $row->placa ?>">
-
-                                             <button type="submit" class="btn btn-primary btn">Generar QR</button>
-                                             <?php echo form_close(); ?>
-                                          </td> 
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/modificarSocio_contrll',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
-                                          <button type="submit" class="btn btn-success btn">Modificar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
-                                       
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group' );
-                                          echo form_open_multipart('usuarios/eliminarlogicobdS',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
-                                          <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
-
-                                    </tr>
-                                    <?php    
-                                    $indice++;
-                                 }
-                                 ?>
-                              </tbody>
-                           </table>
+               <!-- START row-->
+             <!-- <div class="row">
+               <div class="col-lg-6">
+                  <form method="post" data-parsley-validate="" novalidate="">
+                     <!-- START panel-->
+                     <!--  <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <div class="panel-title">Form Register</div>
+                        </div>
+                        <div class="panel-body">
+                           <div class="form-group">
+                              <label class="control-label">Email Address *</label>
+                              <input type="text" name="email" required class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <label class="control-label">Password *</label>
+                              <input id="id-password" type="password" name="password" required class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <label class="control-label">Confirm Password *</label>
+                              <input type="password" name="confirmPassword" required data-parsley-equalto="#id-password" class="form-control">
+                           </div>
+                           <div class="required">* Required fields</div>
+                        </div>
+                        <div class="panel-footer">
+                           <div class="clearfix">
+                              <div class="pull-left">
+                                 <div class="checkbox c-checkbox">
+                                    <label>
+                                       <input type="checkbox" name="agreements" required data-parsley-error-message="Please read and agree the terms">
+                                       <span class="fa fa-check"></span>I agree with the <a href="#">terms</a>
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="pull-right">
+                                 <button type="submit" class="btn btn-primary">Register</button>
+                              </div>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="panel panel-default">
-                     <table class="table">
-                        <thead>
-                           <tr>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
+                     <!-- END panel-->
+                  <!--  </form>
+               </div>
+                <!-- <div class="col-lg-6">
+                  <form method="post" data-parsley-validate="" novalidate="">
+                     <!-- START panel-->
+                     <!--  <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <div class="panel-title">Form Login</div>
+                        </div>
+                        <div class="panel-body">
+                           <div class="form-group">
+                              <label class="control-label">Email Address *</label>
+                              <input type="text" name="email" required class="form-control">
+                           </div>
+                           <div class="form-group">
+                              <label class="control-label">Password *</label>
+                              <input type="password" name="password" required class="form-control">
+                           </div>
+                           <div class="required">* Required fields</div>
+                        </div>
+                        <div class="panel-footer">
+                           <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                     </div>
+                     <!-- END panel-->
+                 <!--   </form>
+               </div>
+            <!--  </div>
+               <!-- END row-->
+               <!-- START row-->
 
-                                 <div class="form-group">
-                                    <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Socio</button>
-                                    </a>
+               <div class="row">
 
+                  <div class="col-md-12">
+
+                     <!-- START panel-->
+                     <div action="" class="panel panel-default">
+
+                        <div class="panel-body">
+                           <legend><center><h2>Formulario de registro de Paradas </h2></center></legend>
+                           <div class="panel-heading">
+                              <div class="panel-title"><code>Campos obligatorios (*)</code></div>
+                           </div>
+                           <?php
+                           echo form_open_multipart('usuarios/agregarbdRuta');
+                           ?>
+                           <fieldset>
+                              <div class="form-row">
+                                  <center><label for="formGroupExampleInput"><h3>Indique la ubicacion del Inicio y Final de la ruta:</h3></label>
+                                 <div id="map2">
+                                    aaa
                                  </div>
-                              </th>
-                              <th>
-                           
-                        </th> 
-                        <!--<th>
-                           <input type="button" value="Alerte" onclick="
-                           Swal.fire({
-                            title: 'Estas seguro?',
-                            text: 'Desabilitara al empleado!',
-                            icon: 'warning',
-                            showCancelButton: true,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Si, desabilitar!'
+                                 <div class="form-group">
+                                 <input type="hidden" class="form-control bg-light" id="coorLongitudI" name="longitudInicio" >
+                                 <input type="hidden" class="form-control bg-light" id="coorLatitudI" name="latitudInicio" >
+                                 <br>
+                                 <input type="hidden" class="form-control bg-light" id="coorLongitudF" name="longitudFinal">
+                                 <input type="hidden" class="form-control bg-light" id="coorLatitudF" name="latitudFinal" >
+                                 </div></center>
+                              </div>
+                           </fieldset>
+                           <fieldset>
+                              <div class="form-group">
+                                 <div class="col-sm-4">
+                                    <input type="hidden" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>">
+                                    <label for="formGroupExampleInput">Nombre de la Ruta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
 
-                         }).then((result) => {
-                         if (result.isConfirmed) {
-                         Swal.fire(
-                         'Deleted!',
-                         'Your file has been deleted.',
-                         'success'
-                         )
-                      }
-                });">
-             </th>-->
-             <th>
-               <?php
-               $atributos = array('class' => 'form-group', 'id' => 'myform');
-               echo form_open_multipart('usuarios/desabilitadosS',$atributos); ?>
-               <button type="submit" class="btn btn-success btn" >Socios desabilitados</button>
-               <?php echo form_close(); ?>
-            </th>
-         </tr>
-      </thead>
-   </table>
-</div>   
-</div>
-<!-- END DATATABLE 1 -->
-<!-- START DATATABLE 2 -->
-            <!--<div class="row">
-               <div class="col-lg-12">
-                  <div class="panel panel-default">
-                     <div class="panel-heading">Data Tables |
-                        <small>Column Ordering</small>
-                     </div>
-                     <div class="panel-body">
-                        
-                     </div>
-                  </div>
-               </div>
-            </div>-->
-            <!-- END DATATABLE 2 -->
-            <!-- START DATATABLE 3-->
-            <!--  <div class="row">
-               <div class="col-lg-12">
-                  <div class="panel panel-default">
-                     <div class="panel-heading">Data Tables |
-                        <small>Column Visibility</small>
-                     </div>
-                     <div class="panel-body">
-                        
-                     </div>
-                  </div>
-               </div>
-            </div>-->
-            <!-- END DATATABLE 3-->
-         </section>
-         <!-- END Page content-->
-      </section>
-      <!-- END Main section-->
-   </section>
-   <!-- END Main wrapper-->
-   <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog modal-sm">
-         <div class="modal-content">
-            <div class="modal-header" style="background:#2C7873 ">
-               <button type="button" data-dismiss="modal" aria-hidden="true" class="close" style="color: white">X</button>
-               <center><h4 id="myModalLabel" class="modal-title" style="color: white">Registro de vehiculo</h4></center>
-            </div>
-            <div class="panel-title"><code>Campos obligatorios (*)</code></div>
-            <?php
-            $atributos = array('class' => 'form-group');
-            echo form_open_multipart('usuarios/agregarVehiculo',$atributos); ?>
-            <input type="hidden" name="idSocio" id="txtidS">
-            <input type="hidden" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>" >
-            <div class="modal-body">
-             <label for="formGroupExampleInput">Placa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="placa" placeholder="Ingrese su numero de placa" maxlength="12"  required>
-             <label for="formGroupExampleInput">Numero de Poliza:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="noPoliza" placeholder="Ingrese el numero de poliza" maxlength="20" onkeypress="return soloNumeros(event)" required>
-             <label for="exampleFormControlSelect1">Tipo de vehiculo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <select class="form-control bg-light" id="exampleFormControlSelect1" name="tipo" required>
-               <option value="TRUFI">TRUFI</option>
-               <option value="TAXI">TAXI</option>
-               <option value="MICROBUS">MICROBUS</option> 
+                                    <input type="text" class="form-control bg-light" id="formGroupExampleInput" name="nombre" placeholder="Ingresar el nombre de la ruta" minlength="7" maxlength="30" required>
+                                 </div>
 
-            </select>
-            <label for="exampleFormControlSelect1">Cuenta con inspeccion vehicular:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-            <select class="form-control bg-light" id="exampleFormControlSelect1" name="inspeccion" required>
-               <option value="SI">SI</option>
-               <option value="NO">NO</option>
-            </select>
-            <label for="formGroupExampleInput">Foto de perfil:</label>
-            <input type="file" class="form-control bg-light" id="formGroupExampleInput" name="userfile"  value="fichero">
-         </div>
-         <div class="modal-footer">
-            <center><button type="submit" class="btn btn-primary btn-block" style="background:#2C7873 ">Guardar registro</button></center>
-            <?php echo form_close(); ?>
-            
+                                 <div class="col-sm-5">
+                                    <label for="formGroupExampleInput">Descripcion:</label>
 
-         </div>
-      </div>   
-   </div>
-   
+                                    <input type="text" class="form-control bg-light" id="formGroupExampleInput" name="descripcion" placeholder="Ingresar alguna descripcion en caso de ser necesaria" minlength="0" maxlength="100" >
+                                 </div>
+
+                                 <div class="col-sm-3">
+                                    <label for="exampleFormControlSelect1">Sentido de la ruta:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+                                    <select class="form-control bg-light" id="exampleFormControlSelect1" name="idSentido" required>
+                                       <option value="1">IDA</option>
+                                       <option value="2">VUELTA</option>
+                                    </select>
+                                     
+
+                              </fieldset>
+                              <hr/>
+
+                              <button type="submit" class="btn btn-success btn-lg btn-block">Registrar Ruta</button>
+                              <?php
+                              echo form_close();
+                              ?>
+                           </div>
+                           <!-- END panel-->
+
+                        </div>
+
+                        <?php
+                        $atributos = array('class' => 'form-group', 'id' => 'myform');
+                        echo form_open_multipart('usuarios/listaRuta',$atributos);
+                        echo "<button type='submit' class='btn btn-danger btn-lg btn-block'>Cancelar registro</button>";
+                        echo form_close();
+                        ?>
+                     </div>
+
+                     <!-- END row-->
+                  </section>
+                  <!-- END Page content-->
+               </section>
+               <!-- END Main section-->
+            </section>

@@ -16,7 +16,7 @@ class Usuarios_model extends CI_Model {
 public function validarPassw($idEmpleado,$password)
 	{
 		$this->db->select('*');
-		$this->db->from('empleado');
+		$this->db->from('empleado'); 
 		$this->db->where('idEmpleado',$idEmpleado);
 		$this->db->where('password',$password);
 		return $this->db->get();
@@ -36,7 +36,7 @@ public function validarPersona($ci)
 
 	//PERSONAL_MODEL
 
-	public function listarperfil($id)
+	public function listarperfilEmpleado($id)
 	{ 
 		$this->db->select('*');
 		$this->db->from('empleado e');
@@ -45,6 +45,34 @@ public function validarPersona($ci)
 		return $this->db->get();
 	}
 
+	public function listarperfilSocio($id)
+	{ 
+		$this->db->select('*');
+		$this->db->from('persona p');
+		$this->db->join('socio s','p.idPersona = s.idPersona');
+		$this->db->join('vehiculo v','s.idSocio = v.idSocio');
+		$this->db->where('s.idSocio',$id);
+		return $this->db->get();
+	}
+	
+	public function listarControlSocio($id,$fechaInicio,$fechaFinal)
+	{ 
+		$valor=0;
+		$this->db->select('*');
+		// $this->db->from('persona p');
+		// $this->db->join('socio s','p.idPersona = s.idPersona');
+		$this->db->from('vehiculo v');
+		$this->db->join('informellegada c','v.idVehiculo = c.idVehiculo');
+		$this->db->join('parada p','c.idParada = p.idParada');
+		$this->db->join('ruta r','c.idRuta = r.idRuta');
+		$this->db->join('tiempos t','p.idParada = t.idParada','r.idRuta = t.idRuta');
+		$this->db->where('c.idVehiculo',$id);
+		$this->db->where('c.fecha >=',$fechaInicio);
+		$this->db->where('c.fecha <=',$fechaFinal);
+		$this->db->where('c.horaLlegada >',$valor);
+		$this->db->order_by('c.idControl');
+		return $this->db->get();
+	}
 	public function listarpersonal()
 	{ 
 		$valor=1;
@@ -92,7 +120,59 @@ public function validarPersona($ci)
 		$this->db->where('s.estado',$valor);
 		return $this->db->get();
 	}
-//
+//listarparada
+	public function listarruta()
+	{ 
+		$valor=1;
+		$this->db->select('*');
+		$this->db->from('ruta r');
+		$this->db->join('sentido s','r.idSentido = s.idSentido');
+		$this->db->where('r.estado',$valor);
+		return $this->db->get();
+	}
+	public function listarruta2()
+	{ 
+		$valor=1;
+		$this->db->select('*');
+		$this->db->from('ruta r');
+		$this->db->join('sentido s','r.idSentido = s.idSentido');
+		$this->db->where('r.estado',$valor);
+		return $this->db->get();
+	}
+	public function listarparada()
+	{ 
+		$valor=1;
+		$this->db->select('*');
+		$this->db->from('parada');
+		$this->db->where('estado',$valor);
+		return $this->db->get();
+	}
+	public function listarOBS()
+	{ 
+		$valor=1;
+		$this->db->select('*');
+		$this->db->from('observacion o');
+		$this->db->join('multa m','o.idMulta = m.idMulta');
+		$this->db->where('o.estado',$valor);
+		return $this->db->get();
+	}
+	public function listarOBS2()
+	{ 
+		$valor=0;
+		$this->db->select('*');
+		$this->db->from('observacion o');
+		$this->db->join('multa m','o.idMulta = m.idMulta');
+		$this->db->where('o.estado',$valor);
+		return $this->db->get();
+	}
+		public function listarparada2()
+	{ 
+		$valor=0;
+		$this->db->select('*');
+		$this->db->from('parada');
+		$this->db->where('estado',$valor);
+		return $this->db->get();
+	}
 	public function recuperarpersonal($id)
 	{
 		
@@ -173,8 +253,6 @@ public function validarPersona($ci)
 		$this->db->insert('vehiculo',$data1);
 		return $this->db->insert_id();
 		
-		
-		
 	}
 	public function agregarPersona($data)
 	{
@@ -186,6 +264,29 @@ public function validarPersona($ci)
 	{
 		
 		$this->db->insert('parada',$data1);
+		return $this->db->insert_id();
+	}
+	
+	public function agregarObsModels($data)
+	{
+		
+		$this->db->insert('observacion',$data);
+	}
+	public function agregarCargoModels($data1)
+	{
+		
+		$this->db->insert('multa',$data1);
+	}
+	public function agregarRuta($data)
+	{
+		
+		$this->db->insert('ruta',$data);
+		return $this->db->insert_id();
+	}
+	public function agregarTiempo($data)
+	{
+		
+		$this->db->insert('tiempos',$data);
 		return $this->db->insert_id();
 	}
 	public function agregarEmpleado($data1)
@@ -218,7 +319,11 @@ public function validarPersona($ci)
 		$this->db->where('idPersona',$id);
 		$this->db->update('empleado',$data);
 	}
-
+	public function eliminarlogicoOBS($id,$data)
+	{
+		$this->db->where('idObservacion',$id);
+		$this->db->update('observacion',$data);
+	}
 	public function eliminarlogicosocio($id,$data)
 	{
 		$this->db->where('idPersona',$id);

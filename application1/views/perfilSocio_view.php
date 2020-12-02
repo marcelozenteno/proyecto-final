@@ -431,7 +431,7 @@
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
-                   <li>
+                    <li>
                      <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu">
                         <span class="item-text">Listado</span>
                      </a>
@@ -447,7 +447,7 @@
                </a>
                <!-- START SubMenu item-->
                <ul class="nav collapse ">
-                <li>
+                 <li>
                   <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
                      <span class="item-text">Formulario</span>
                   </a>
@@ -458,77 +458,77 @@
                      <span class="item-text">Listado</span>
                   </a>
                </li>
-               </ul>
-               <!-- END SubMenu item-->
+            </ul>
+            <!-- END SubMenu item-->
+         </li>
+
+         <li>
+            <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+               <em class="fa fa-exchange"></em>
+               <span class="item-text">Rutas</span>
+            </a>
+            <!-- START SubMenu item-->
+            <ul class="nav collapse ">
+              <li>
+               <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                  <span class="item-text">Formulario</span>
+               </a>
+            </li>
+            <li>
+               <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                  <div class="label label-primary pull-right"></div>
+                  <span class="item-text">Listado</span>
+               </a>
             </li>
 
-               <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-exchange"></em>
-                     <span class="item-text">Rutas</span>
-                  </a>
-                  <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
-                        <span class="item-text">Formulario</span>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
-                        <div class="label label-primary pull-right"></div>
-                        <span class="item-text">Listado</span>
-                     </a>
-                  </li>
-                     
-                  </ul>
-                  <!-- END SubMenu item-->
-               </li>
+         </ul>
+         <!-- END SubMenu item-->
+      </li>
 
-               <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-exclamation-circle"></em>
-                     <span class="item-text">Observaciones</span>
-                  </a>
-                  <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
-                        <span class="item-text">Calificaciones</span>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
-                        <div class="label label-primary pull-right"></div>
-                        <span class="item-text">Reclamos</span>
-                     </a>
-                  </li>
-                     
-                  </ul>
-                  <!-- END SubMenu item-->
-               </li>
-               <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-clock-o"></em>
-                     <span class="item-text">Tiempos</span>
-                  </a>
-                  <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
-                        <span class="item-text">Listado</span>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
-                        <div class="label label-primary pull-right"></div>
-                        <span class="item-text">Formulario</span>
-                     </a>
-                  </li>
-                     
-                  </ul>
-                  <!-- END SubMenu item-->
-               </li>
+      <li>
+         <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+            <em class="fa fa-exclamation-circle"></em>
+            <span class="item-text">Observaciones</span>
+         </a>
+         <!-- START SubMenu item-->
+         <ul class="nav collapse ">
+           <li>
+            <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+               <span class="item-text">Calificaciones</span>
+            </a>
+         </li>
+         <li>
+            <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+               <div class="label label-primary pull-right"></div>
+               <span class="item-text">Reclamos</span>
+            </a>
+         </li>
+
+      </ul>
+      <!-- END SubMenu item-->
+   </li>
+   <li>
+      <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+         <em class="fa fa-clock-o"></em>
+         <span class="item-text">Tiempos</span>
+      </a>
+      <!-- START SubMenu item-->
+      <ul class="nav collapse ">
+        <li>
+         <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+            <span class="item-text">Listado</span>
+         </a>
+      </li>
+      <li>
+         <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+            <div class="label label-primary pull-right"></div>
+            <span class="item-text">Formulario</span>
+         </a>
+      </li>
+
+   </ul>
+   <!-- END SubMenu item-->
+</li>
               <!-- <li>
                   <a href="<?php echo base_url(); ?>47admin/#" title="Elements" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-wrench"></em>
@@ -614,490 +614,184 @@
          </aside>
          <!-- End aside-->
          <!-- START aside-->
-         <aside class="offsidebar">
-            <!-- START Off Sidebar (right)-->
-            <nav>
-               <ul class="nav">
-                  <!-- START user info-->
-                  <li>
-                     <div class="item">
-                        <div style="background-image: url('app/img/offsidebar-bg.jpg')" class="p-lg">
-                           <div class="text-center">
-                              <p>
-                                 <img src="<?php echo base_url(); ?>47admin/app/img/user/02.jpg" style="width: 64px; height: 64px" alt="Image" class="img-circle img-thumbnail">
-                              </p>
-                              <p class="text-white">
-                                 <strong>Alex</strong>
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-                  <!-- END user info-->
-                  <!-- START list title-->
-                  <li class="p">
-                     <small class="text-muted">ONLINE</small>
-                  </li>
-                  <!-- END list title-->
-                  <li>
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-success point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/05.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Tommy Sam</strong>
-                              <br>
-                              <small class="text-muted">tommy39</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-success point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/06.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Beverley Pierce</strong>
-                              <br>
-                              <small class="text-muted">be40210</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-danger point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/07.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Victor Long</strong>
-                              <br>
-                              <small class="text-muted">longlong</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-warning point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/08.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Danielle Berry</strong>
-                              <br>
-                              <small class="text-muted">hunter49</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                  </li>
-                  <!-- START list title-->
-                  <li class="p">
-                     <small class="text-muted">OFFLINE</small>
-                  </li>
-                  <!-- END list title-->
-                  <li>
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/09.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Bertha Cooper</strong>
-                              <br>
-                              <small class="text-muted">ber123</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/10.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Anne Curtis</strong>
-                              <br>
-                              <small class="text-muted">anni</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                  </li>
-                  <li>
-                     <!-- Optional link to list more users-->
-                     <a href="<?php echo base_url(); ?>47admin/#" title="See more contacts" class="p">
-                        <strong>
-                           <small class="text-muted">&hellip;</small>
-                        </strong>
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <!-- END Off Sidebar (right)-->
-         </aside>
-         <!-- End aside-->
-         <!-- START aside-->
-         <aside class="offsidebar">
-            <!-- START Off Sidebar (right)-->
-            <nav>
-               <ul class="nav">
-                  <!-- START user info-->
-                  <li>
-                     <div class="item">
-                        <div style="background-image: url('app/img/offsidebar-bg.jpg')" class="p-lg">
-                           <div class="text-center">
-                              <p>
-                                 <img src="<?php echo base_url(); ?>47admin/app/img/user/02.jpg" style="width: 64px; height: 64px" alt="Image" class="img-circle img-thumbnail">
-                              </p>
-                              <p class="text-white">
-                                 <strong>Alex</strong>
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-                  <!-- END user info-->
-                  <!-- START list title-->
-                  <li class="p">
-                     <small class="text-muted">ONLINE</small>
-                  </li>
-                  <!-- END list title-->
-                  <li>
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-success point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/05.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Tommy Sam</strong>
-                              <br>
-                              <small class="text-muted">tommy39</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-success point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/06.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Beverley Pierce</strong>
-                              <br>
-                              <small class="text-muted">be40210</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-danger point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/07.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Victor Long</strong>
-                              <br>
-                              <small class="text-muted">longlong</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-warning point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/08.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Danielle Berry</strong>
-                              <br>
-                              <small class="text-muted">hunter49</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                  </li>
-                  <!-- START list title-->
-                  <li class="p">
-                     <small class="text-muted">OFFLINE</small>
-                  </li>
-                  <!-- END list title-->
-                  <li>
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/09.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Bertha Cooper</strong>
-                              <br>
-                              <small class="text-muted">ber123</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                     <!-- START User status-->
-                     <a href="<?php echo base_url(); ?>47admin/#" class="media p mt0">
-                        <span class="pull-right">
-                           <span class="point point-lg"></span>
-                        </span>
-                        <span class="pull-left">
-                           <!-- Contact avatar-->
-                           <img src="<?php echo base_url(); ?>47admin/app/img/user/10.jpg" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-                        </span>
-                        <!-- Contact info-->
-                        <span class="media-body">
-                           <span class="media-heading">
-                              <strong class="text-white">Anne Curtis</strong>
-                              <br>
-                              <small class="text-muted">anni</small>
-                           </span>
-                        </span>
-                     </a>
-                     <!-- END User status-->
-                  </li>
-                  <li>
-                     <!-- Optional link to list more users-->
-                     <a href="<?php echo base_url(); ?>47admin/#" title="See more contacts" class="p">
-                        <strong>
-                           <small class="text-muted">&hellip;</small>
-                        </strong>
-                     </a>
-                  </li>
-               </ul>
-            </nav>
-            <!-- END Off Sidebar (right)-->
-         </aside>
+         
          <!-- END aside-->
          <!-- START Main section-->
-         <section>
+         <section >
             <!-- START Page content-->
-            <section class="main-content">
+
+            <section class="main-content" >
+
 
                <!-- START row-->
-             <!-- <div class="row">
-               <div class="col-lg-6">
-                  <form method="post" data-parsley-validate="" novalidate="">
-                     <!-- START panel-->
-                     <!--  <div class="panel panel-default">
-                        <div class="panel-heading">
-                           <div class="panel-title">Form Register</div>
-                        </div>
-                        <div class="panel-body">
-                           <div class="form-group">
-                              <label class="control-label">Email Address *</label>
-                              <input type="text" name="email" required class="form-control">
-                           </div>
-                           <div class="form-group">
-                              <label class="control-label">Password *</label>
-                              <input id="id-password" type="password" name="password" required class="form-control">
-                           </div>
-                           <div class="form-group">
-                              <label class="control-label">Confirm Password *</label>
-                              <input type="password" name="confirmPassword" required data-parsley-equalto="#id-password" class="form-control">
-                           </div>
-                           <div class="required">* Required fields</div>
-                        </div>
-                        <div class="panel-footer">
-                           <div class="clearfix">
-                              <div class="pull-left">
-                                 <div class="checkbox c-checkbox">
-                                    <label>
-                                       <input type="checkbox" name="agreements" required data-parsley-error-message="Please read and agree the terms">
-                                       <span class="fa fa-check"></span>I agree with the <a href="#">terms</a>
-                                    </label>
-                                 </div>
-                              </div>
-                              <div class="pull-right">
-                                 <button type="submit" class="btn btn-primary">Register</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- END panel-->
-                  <!--  </form>
-               </div>
-                <!-- <div class="col-lg-6">
-                  <form method="post" data-parsley-validate="" novalidate="">
-                     <!-- START panel-->
-                     <!--  <div class="panel panel-default">
-                        <div class="panel-heading">
-                           <div class="panel-title">Form Login</div>
-                        </div>
-                        <div class="panel-body">
-                           <div class="form-group">
-                              <label class="control-label">Email Address *</label>
-                              <input type="text" name="email" required class="form-control">
-                           </div>
-                           <div class="form-group">
-                              <label class="control-label">Password *</label>
-                              <input type="password" name="password" required class="form-control">
-                           </div>
-                           <div class="required">* Required fields</div>
-                        </div>
-                        <div class="panel-footer">
-                           <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
-                     </div>
-                     <!-- END panel-->
-                 <!--   </form>
-               </div>
-            <!--  </div>
-               <!-- END row-->
-               <!-- START row-->
-
                <div class="row">
+                 <?php
 
-                  <div class="col-md-12">
+                 foreach ($perfil->result() as $row)
+                 {
+                  ?>
+                  <div class="col-lg-12">
+                     <!-- START widget-->
+                     
+                     <?php 
+                  }
+                  ?>
 
-                     <!-- START panel-->
-                     <div action="" class="panel panel-default">
 
+                  <div class="panel panel-default">
+                     <div class="panel-heading" style="background-color:#021C1E;">
+                        <center><h3 class="mt0" style="color:white;">INFORME DE SOCIO</h3></center></div>
                         <div class="panel-body">
-                           <legend><center><h2>Formulario de registro de Paradas </h2></center></legend>
-                           <div class="panel-heading">
-                              <div class="panel-title"><code>Campos obligatorios (*)</code></div>
-                           </div>
-                           <?php
-                           echo form_open_multipart('usuarios/agregarbdParada');
-                           ?>
-                           <fieldset>
-                              <div class="form-row">
-                                  <center><label for="formGroupExampleInput"><h3>Indique la ubicacion de la parada:</h3></label>
-                                 <div id="map">
-                                    aaa
-                                 </div>
-                                 <input type="hidden" id="coorLongitud" name="longitud">
-                                 <input type="hidden" id="coorLatitud" name="latitud">
-                                 </center>
-                              </div>
-                           </fieldset>
-                           <fieldset>
-                              <div class="form-group">
-                                 <div class="col-sm-4">
-                                    <input type="hidden" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>">
-                                    <label for="formGroupExampleInput">Direcccion o calles:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-
-                                    <input type="text" class="form-control bg-light" id="formGroupExampleInput" name="calles" placeholder="Ingresar la direcccion o las calles" minlength="7" maxlength="70" required>
-                                 </div>
-
-                                 <div class="col-sm-3">
-                                    <label for="formGroupExampleInput">Nombre o alias:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-
-                                    <input type="text" class="form-control bg-light" id="formGroupExampleInput" name="nombreAlias" placeholder="Ingresar el nombre o alias de la parada" minlength="7" maxlength="50"  required>
-                                 </div>
-
-                                 <div class="col-sm-2">
-                                    <label for="exampleFormControlSelect1">Intervalo de salida:</label>
-                                    <select class="form-control bg-light" id="exampleFormControlSelect1" name="intervaloSalida" required>
-                                       <option value="2">2</option>
-                                       <option value="3">4</option>
-                                       <option value="4">6</option>
-                                       <option value="8">8</option>
-                                       <option value="10">10</option>
-                                       <option value="12">12</option>
-                                       <option value="15">15</option>
-
-                                    </select>
+                           <!-- Nav tabs -->
+                           <ul class="nav nav-tabs"> 
+                              <li class="active"><a href="#home" data-toggle="tab">Perfil</a>
+                              </li>
+                              <li><a href="#profile" data-toggle="tab">Vehiculos</a>
+                              </li>
+                              
+                           </ul>
+                           <!-- Tab panes -->
+                           <div class="tab-content">
+                              <div id="home" class="tab-pane fade in active">
+                                 <center><h2>Perfil de Socio</h2></center>
+                                 <p>
+                                  <div class="row row-table text-center">
+                                     <div class="col-xs-2">
                                      </div>
-                                    <div class="col-sm-3 ">
-                                  <label for="formGroupExampleInput">Foto de perfil:</label>
-                                 <input type="file" class="form-control bg-light" id="formGroupExampleInput" name="userfile"  value="fichero">
+                                     <div class="col-xs-7">
+
+                                       <div class="pull-left">
+                                          <img src="<?php echo base_url() ?>uploads/<?php echo $row->foto; ?>" style="width: 200px; height: 200px;" alt="Image" class="media-object img-circle">
+                                       </div>
+                                       <div class="media-body">   
+
+                                          <br><br>
+                                          <h3 class="mt0"><?php echo $row->apellidoPaterno; ?>&nbsp;<?php echo $row->nombres; ?></h3>
+                                          <ul class="list-unstyled">
+                                             <li class="mb-sm">
+                                                <em class="fa fa-map-marker fa-fw"></em>Cochabamba, Bolivia</li>
+                                                <li class="mb-sm">
+                                                   <em class="fa fa-phone fa-fw"></em><?php echo $row->celular; ?></li>
+                                                   <li class="mb-sm">
+                                                      <em class="fa fa-envelope fa-fw"></em><?php echo $row->correo; ?></li>
+                                                   </ul>
+                                                </div>
+
+                                             </div>
 
 
+                                             <div class="col-xs-4">
+                                                <div  class="media p mt0">
+                                                   <div class="pull-left">
+                                                      <img src="<?php echo base_url(); ?>47admin/app/img/LogoT.png" style="width: 200px; height: 200px;" alt="Image" class="media-object ">
+                                                   </div>
+
+                                                </div>
+                                             </div>
+                                             <div class="col-xs-3">
+                                             </div>
+                                          </div> 
+                                          <br><br>
+                                       </p>
+                                    </div>
+                                    <div id="profile" class="tab-pane fade">
+                                       <center><h2>Vehiculos de Socio</h2></center>
+                                       <p>
+                                          <div class="panel-body">
+                                             <table id="datatable"  class="table table-striped table-hover">
+                                                <thead>
+
+
+
+                                                      <tr>
+                                                         
+                                                         <th><h3> Placa</h3></th>
+                                                         <th><h3>Tipo de Vehiculo</h3></th>
+                                                         
+
+                                                         <th><h3>Foto</h3></th>
+                                                         <th><h3>Fecha inical  -  Fecha final de multas</h3></th>
+                                                         <th></th>
+                                                         <!-- <th><h3>Desabilitar</h3></th> -->
+                                                      </tr>
+                                                   </thead>
+                                                   <tbody>
+                                                      <?php
+                                                      
+                                                      foreach ($perfil->result() as $row)
+                                                      {
+                                                         ?>
+                                                         <tr>
+                                                            
+                                                            <td><h4><?php echo $row->placa; ?></h4></td>
+                                                            <td><h4><?php echo $row->tipo; ?></h4></td>
+                                                            
+
+                                                            <td>
+                                                             <!-- Contact avatar-->
+                                                             <img src="<?php echo base_url() ?>uploads/vehiculos/<?php echo $row->fotoV; ?>" style="width: 60px; height: 60px" alt="Image" class="media-object img-circle">
+
+                                                          </td>
+                                                           
+                                                         <td><h4><center>
+                                                            <?php
+                                                            $atributos = array('class' => 'form-group');
+                                                            echo form_open_multipart('usuarios/multasSocio_contrll',$atributos); ?>
+                                                            
+                                                           <!--  <input type="hidden" name="idSocio" value="<?php echo $row->idSocio; ?>"> -->
+                                                           <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
+                                                           <input type="date" name="fechaInicio" value="19">
+                                                           <input type="date" name="fechaFinal" value="19">
+                                                           <br><br>
+                                                            <center><button type="submit" class="btn btn-success btn">Multas</button></center>
+                                                            <?php echo form_close(); ?>
+                                                         </center></h4>
+                                                         </td>
+                                                         <td>
+                                                         </td>
+                                                      
+                                                      </tr>
+                                                      <?php    
+                                                      
+                                                   }
+                                                   ?>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </p>
+                                    </div>
+                                    <!-- <div id="messages" class="tab-pane fade">
+                                       <center><h3>Recorridos del socio</h3></center>
+                                       <p>
+                                          
+                                          
+
+                                       </p>
+                                    </div>
+                                    <div id="settings" class="tab-pane fade">
+                                       <center><h3>Dias trabajados del socio</h3></center>
+                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div> -->
                                  </div>
-
-                              </fieldset>
-                              <hr/>
-
-                              <button type="submit" class="btn btn-success btn-lg btn-block">Registrar Parada</button>
-                              <?php
-                              echo form_close();
-                              ?>
+                              </div>
                            </div>
-                           <!-- END panel-->
-
                         </div>
 
-                        <?php
-                        $atributos = array('class' => 'form-group', 'id' => 'myform');
-                        echo form_open_multipart('usuarios/listaParada',$atributos);
-                        echo "<button type='submit' class='btn btn-danger btn-lg btn-block'>Cancelar registro</button>";
-                        echo form_close();
-                        ?>
                      </div>
 
-                     <!-- END row-->
-                  </section>
-                  <!-- END Page content-->
-               </section>
-               <!-- END Main section-->
+                     <!-- END widget-->
+                  </div>
+                  <!-- END widget-->
+
+               </div>
+               <!-- END row-->
             </section>
+            <!-- END Page content-->
+         </section>
+         <!-- END Main section-->
+      </section>
+      <!-- END Main wrapper-->
+
+
+

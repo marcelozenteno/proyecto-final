@@ -128,7 +128,7 @@
                            <button type="submit" class="btn btn-block btn-green">Ingresar</button><?php 
                echo form_close();
                ?></form>
-               <?php 
+               <!-- <?php 
                echo form_open_multipart('usuarios/validarpersona');
                ?>
                             <br><center>o como Invitado</center>
@@ -141,7 +141,7 @@
                               </a></center>
                               <?php
                      echo form_close();
-               ?>          <br>
+               ?>     -->      <br>
                            
                      </div> 
                         

@@ -947,38 +947,18 @@
                <div class="col-lg-12">
                   <div class="panel panel-default">
 
-                    <legend><center><h2>Listado de vehiculos activos</h2></center></legend>
+                    <legend><center><h2>LISTADO DE PARADAS ACTIVAS</h2></center></legend>
 
 
                     <div class="panel-body">
                      <table id="datatable1"  class="table table-striped table-hover">
                         <thead>
-
-                           <div class="panel panel-default panel-demo">
-                                    <div class="panel-heading">Codigo QR generado
-                                       <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right">
-                                          <em class="fa fa-times"></em>
-                                       </a>
-                                       <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
-                                          <em class="fa fa-minus"></em>
-                                       </a>
-
-                                    </div>
-                                    <div class="panel-body">
-                                       <center><p><?php if(isset($qr_image)){ ?>
-                                          <img src="<?php echo base_url(); ?>codigo_qr/temp/vehiculo/<?php echo $qr_image; ?>">
-                                          <?php } ?></p></center>
-                                       </div>
-                                    </div>
-
                            <tr>
                               <th>No.</th>
-                              <th>Placa</th>
-                              <th>Tipo de Vehiculo</th>
-                              <th>Inspeccion</th>
-                                                           
-                              <th>Foto</th>
-                              <th>Generar</th>
+                              <th>Nombre</th>
+                              <th>Recorrido</th>
+                              <th>Sentido</th>
+                              
                               <th>Modificar</th>
                               <th>Desabilitar</th>
                                  <!--<th class="sort-numeric">Engine version</th>
@@ -988,36 +968,22 @@
                               <tbody>
                                  <?php
                                  $indice=1;
-                                 foreach ($vehiculo->result() as $row)
+                                 foreach ($parada->result() as $row)
                                  {
                                     ?>
                                     <tr>
                                        <td><?php echo $indice; ?></td>
-                                       <td><?php echo $row->placa; ?></td>
-                                       <td><?php echo $row->tipo; ?></td>
-                                       <td><?php echo $row->inspeccion; ?></td>
-                                                                            
+                                       <td><?php echo $row->calles; ?></td>
+                                       <td><?php echo $row->nombreAlias; ?></td>
                                        <td>
-                                         <!-- Contact avatar-->
-                                         <img src="<?php echo base_url() ?>uploads/vehiculos/<?php echo $row->fotoV; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-
-                                         </td>
-                                         <td>
-
-                                             <?php
-                                             $atributos = array('class' => 'form-group');
-                                             echo form_open_multipart('usuarios/generarV',$atributos); ?>
-                                             <input type="hidden" name="idVehiculo" value="<?php echo $row->idVehiculo ?>">
-                                              <input type="hidden" name="placaV" value="<?php echo $row->placa ?>">
-
-                                             <button type="submit" class="btn btn-primary btn">Generar QR</button>
-                                             <?php echo form_close(); ?>
-                                          </td> 
+                                          <img src="<?php echo base_url() ?>uploads/parada/<?php echo $row->foto; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
+                                       </td>
+                                                                            
                                        <td>
                                           <?php
                                           $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/modificarSocio_contrll',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
+                                          echo form_open_multipart('usuarios/modificarParada_contrll',$atributos); ?>
+                                          <input type="hidden" name="id" value="<?php echo $row->idParada; ?>">
                                           <button type="submit" class="btn btn-success btn">Modificar</button>
                                           <?php echo form_close(); ?>
                                        </td>
@@ -1025,8 +991,8 @@
                                        <td>
                                           <?php
                                           $atributos = array('class' => 'form-group' );
-                                          echo form_open_multipart('usuarios/eliminarlogicobdS',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
+                                          echo form_open_multipart('usuarios/desabilitarParada',$atributos); ?>
+                                          <input type="hidden" name="id" value="<?php echo $row->idParada; ?>">
                                           <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
                                           <?php echo form_close(); ?>
                                        </td>
@@ -1058,7 +1024,7 @@
                               <th>
 
                                  <div class="form-group">
-                                    <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Socio</button>
+                                    <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Parada</button>
                                     </a>
 
                                  </div>
@@ -1090,8 +1056,8 @@
              <th>
                <?php
                $atributos = array('class' => 'form-group', 'id' => 'myform');
-               echo form_open_multipart('usuarios/desabilitadosS',$atributos); ?>
-               <button type="submit" class="btn btn-success btn" >Socios desabilitados</button>
+               echo form_open_multipart('usuarios/desabilitadosParada',$atributos); ?>
+               <button type="submit" class="btn btn-success btn" >Paradas desabilitadas</button>
                <?php echo form_close(); ?>
             </th>
          </tr>

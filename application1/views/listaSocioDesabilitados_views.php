@@ -788,7 +788,7 @@
                <div class="col-lg-12">
                   <div class="panel panel-default">
                      
-                        <center><legend><h2>Formulario de actulizacion de datos del socio</h2></legend></center>
+                        <center><legend><h2>Formulario de socios desabilitados</h2></legend></center>
                      
                      <div class="panel-body">
                         <table id="datatable1" class="table table-striped table-hover">
@@ -879,12 +879,10 @@
                            </div>
                         </th>
                         <th>
-                           <!--<?php
-                           $atributos = array('class' => 'form-group', 'id' => 'myform');
-                           echo form_open_multipart('usuarios/actantiguedad',$atributos); ?>
-                           <input type="hidden" name="fechaIngreso" value="<?php echo $row->fechaIngreso; ?>">
-                           <button type="submit" class="btn btn-primary btn">Actualizar Antiguedad</button>
-                           <?php echo form_close(); ?>-->
+                           <div class="form-group">
+                                       <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Ver todos los vehiculos</button>
+                                       </a>
+                                    </div>
                         </th> 
                         <th>
                            <?php

@@ -1,4 +1,4 @@
- <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  ?>
  <section class="wrapper">
    <!-- START Top Navbar-->
@@ -330,7 +330,7 @@
                <!-- END user info-->
                <!-- START Menu-->
                <li class="active" >
-                  <a href="<?php echo base_url(); ?>47admin/dashboard.html" title="Dashboard" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url(); ?>index.php/usuarios/listaObservacion" title="Dashboard" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-home"></em>
                      <div class="label label-primary pull-right"></div>
                      <span class="item-text">Principal</span>
@@ -379,7 +379,7 @@
                </li>
                
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url(); ?>" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-users"></em>
                      <span class="item-text">Socios</span>
                   </a>
@@ -463,19 +463,19 @@
             </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Rutas" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exchange"></em>
                      <span class="item-text">Rutas</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formRutas" title="Formulario de registro de Rutas" data-toggle="" class="no-submenu">
                         <span class="item-text">Formulario</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaRutas" title="Listado de Rutas" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
                         <span class="item-text">Listado</span>
                      </a>
@@ -486,7 +486,7 @@
                </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="" title="Forms" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exclamation-circle"></em>
                      <span class="item-text">Observaciones</span>
                   </a>
@@ -947,160 +947,109 @@
                <div class="col-lg-12">
                   <div class="panel panel-default">
 
-                    <legend><center><h2>Listado de vehiculos activos</h2></center></legend>
+                   <legend><center><h2>Listado de multas activas</h2></center></legend>
 
 
-                    <div class="panel-body">
+                   <div class="panel-body">
                      <table id="datatable1"  class="table table-striped table-hover">
                         <thead>
-
-                           <div class="panel panel-default panel-demo">
-                                    <div class="panel-heading">Codigo QR generado
-                                       <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right">
-                                          <em class="fa fa-times"></em>
-                                       </a>
-                                       <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
-                                          <em class="fa fa-minus"></em>
-                                       </a>
-
-                                    </div>
-                                    <div class="panel-body">
-                                       <center><p><?php if(isset($qr_image)){ ?>
-                                          <img src="<?php echo base_url(); ?>codigo_qr/temp/vehiculo/<?php echo $qr_image; ?>">
-                                          <?php } ?></p></center>
-                                       </div>
-                                    </div>
-
                            <tr>
                               <th>No.</th>
-                              <th>Placa</th>
-                              <th>Tipo de Vehiculo</th>
-                              <th>Inspeccion</th>
-                                                           
-                              <th>Foto</th>
-                              <th>Generar</th>
+                              <th>Descripcion de la multa</th>
+                              <th>Primer Monto</th>
+                              <th>Segundo Monto</th>
+                              <th>Cargo de multa</th>
                               <th>Modificar</th>
                               <th>Desabilitar</th>
-                                 <!--<th class="sort-numeric">Engine version</th>
-                                    <th class="sort-alpha">CSS grade</th>-->
                                  </tr>
                               </thead>
                               <tbody>
-                                 <?php
-                                 $indice=1;
-                                 foreach ($vehiculo->result() as $row)
-                                 {
-                                    ?>
-                                    <tr>
-                                       <td><?php echo $indice; ?></td>
-                                       <td><?php echo $row->placa; ?></td>
-                                       <td><?php echo $row->tipo; ?></td>
-                                       <td><?php echo $row->inspeccion; ?></td>
-                                                                            
-                                       <td>
-                                         <!-- Contact avatar-->
-                                         <img src="<?php echo base_url() ?>uploads/vehiculos/<?php echo $row->fotoV; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-
-                                         </td>
-                                         <td>
-
+                                    
+                                    <?php
+                                    $indice=1;
+                                    foreach ($obs->result() as $row)
+                                    {
+                                       ?>
+                                       <tr>
+                                          <td><?php echo $indice; ?></td>
+                                          <td><?php echo $row->concepto; ?></td>
+                                          <td><?php echo $row->primeraMulta; ?></td>
+                                          <td><?php echo $row->segundaMulta; ?></td>
+                                          <td><?php echo $row->descripcion; ?></td>
+                                          <td>
                                              <?php
                                              $atributos = array('class' => 'form-group');
-                                             echo form_open_multipart('usuarios/generarV',$atributos); ?>
-                                             <input type="hidden" name="idVehiculo" value="<?php echo $row->idVehiculo ?>">
-                                              <input type="hidden" name="placaV" value="<?php echo $row->placa ?>">
-
-                                             <button type="submit" class="btn btn-primary btn">Generar QR</button>
+                                             echo form_open_multipart('usuarios/modificarOBS_contrll',$atributos); ?>
+                                             <input type="hidden" name="idObservacion" value="<?php echo $row->idObservacion; ?>">
+                                             <button type="submit" class="btn btn-success btn">Modificar</button>
                                              <?php echo form_close(); ?>
-                                          </td> 
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/modificarSocio_contrll',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
-                                          <button type="submit" class="btn btn-success btn">Modificar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
-                                       
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group' );
-                                          echo form_open_multipart('usuarios/eliminarlogicobdS',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idVehiculo; ?>">
-                                          <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
+                                          </td>
 
-                                    </tr>
-                                    <?php    
-                                    $indice++;
-                                 }
-                                 ?>
-                              </tbody>
-                           </table>
+                                          <td>
+                                             <?php
+                                             $atributos = array('class' => 'form-group' );
+                                             echo form_open_multipart('usuarios/eliminarlogicobdOBS',$atributos); ?>
+                                             <input type="hidden" name="idObservacion" value="<?php echo $row->idObservacion; ?>">
+                                             <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
+                                             <?php echo form_close(); ?>
+                                          </td>
+
+                                       </tr>
+                                       <?php    
+                                       $indice++;
+                                    }
+                                    ?>
+                                 </tbody>
+                              </table>
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="panel panel-default">
-                     <table class="table">
-                        <thead>
-                           <tr>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
+                     <div class="panel panel-default">
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
 
-                                 <div class="form-group">
-                                    <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Socio</button>
-                                    </a>
+                                    <div class="form-group">
+                                       <a href="<?php echo base_url(); ?>index.php/usuarios/formObservacion" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Observacion</button>
+                                       </a>
+
+                                    </div>
+                                 </th>
+                                 <th>
+                                    <div class="form-group">
+                                       <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Ver todos los vehiculos</button>
+                                       </a>
+                                    </div>
+                                 </th> 
+                                 <div>
+
 
                                  </div>
-                              </th>
-                              <th>
-                           
-                        </th> 
-                        <!--<th>
-                           <input type="button" value="Alerte" onclick="
-                           Swal.fire({
-                            title: 'Estas seguro?',
-                            text: 'Desabilitara al empleado!',
-                            icon: 'warning',
-                            showCancelButton: true,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
-                            confirmButtonText: 'Si, desabilitar!'
-
-                         }).then((result) => {
-                         if (result.isConfirmed) {
-                         Swal.fire(
-                         'Deleted!',
-                         'Your file has been deleted.',
-                         'success'
-                         )
-                      }
-                });">
-             </th>-->
-             <th>
-               <?php
-               $atributos = array('class' => 'form-group', 'id' => 'myform');
-               echo form_open_multipart('usuarios/desabilitadosS',$atributos); ?>
-               <button type="submit" class="btn btn-success btn" >Socios desabilitados</button>
-               <?php echo form_close(); ?>
-            </th>
-         </tr>
-      </thead>
-   </table>
-</div>   
-</div>
-<!-- END DATATABLE 1 -->
-<!-- START DATATABLE 2 -->
+                                 <th>
+                                    <?php
+                                    $atributos = array('class' => 'form-group', 'id' => 'myform');
+                                    echo form_open_multipart('usuarios/desabilitadosOBS',$atributos); ?>
+                                    <button type="submit" class="btn btn-success btn" >Observaciones desabilitadas</button>
+                                    <?php echo form_close(); ?>
+                                 </th>
+                              </tr>
+                           </thead>
+                        </table>
+                     </div>   
+                  </div>
+                  <!-- END DATATABLE 1 -->
+                  <!-- START DATATABLE 2 -->
             <!--<div class="row">
                <div class="col-lg-12">
                   <div class="panel panel-default">
@@ -1145,15 +1094,15 @@
             <?php
             $atributos = array('class' => 'form-group');
             echo form_open_multipart('usuarios/agregarVehiculo',$atributos); ?>
-            <input type="hidden" name="idSocio" id="txtidS">
-            <input type="hidden" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>" >
+            <input type="text" name="idSocio" id="txtidS">
+            <input type="text" name="idEmpleado" value="<?php echo $this->session->userdata('idObservacion') ?>" >
             <div class="modal-body">
-             <label for="formGroupExampleInput">Placa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="placa" placeholder="Ingrese su numero de placa" maxlength="12"  required>
-             <label for="formGroupExampleInput">Numero de Poliza:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="noPoliza" placeholder="Ingrese el numero de poliza" maxlength="20" onkeypress="return soloNumeros(event)" required>
-             <label for="exampleFormControlSelect1">Tipo de vehiculo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <select class="form-control bg-light" id="exampleFormControlSelect1" name="tipo" required>
+              <label for="formGroupExampleInput">Placa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <input type="text" class="form-control bg-light" name="placa" placeholder="Ingrese su numero de placa" maxlength="12"  required>
+              <label for="formGroupExampleInput">Numero de Poliza:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <input type="text" class="form-control bg-light" name="noPoliza" placeholder="Ingrese el numero de poliza" maxlength="20" onkeypress="return soloNumeros(event)" required>
+              <label for="exampleFormControlSelect1">Tipo de vehiculo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <select class="form-control bg-light" id="exampleFormControlSelect1" name="tipo" required>
                <option value="TRUFI">TRUFI</option>
                <option value="TAXI">TAXI</option>
                <option value="MICROBUS">MICROBUS</option> 
@@ -1174,5 +1123,7 @@
 
          </div>
       </div>   
+
    </div>
-   
+
+</div>

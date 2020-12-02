@@ -105,11 +105,27 @@ document.getElementById("ci").value = document.getElementById("nombre").value;
     height: 300px;
         width: 70%;
   }
+  #map2{
+    height: 300px;
+        width: 70%;
+  }
   #coorLongitud{
-    width: 400px;
+    width: 200px;
   }
   #coorLatitud{
-    width: 400px;
+    width: 200px;
+  }
+  #coorLongitudF{
+    width: 200px;
+  }
+  #coorLatitudF{
+    width: 200px;
+  }
+  #coorLongitudI{
+    width: 200px;
+  }
+  #coorLatitudI{
+    width: 200px;
   }
   html,
       body {
@@ -119,5 +135,6 @@ document.getElementById("ci").value = document.getElementById("nombre").value;
       }
     </style>
 </style>
+
 </head>
 <body >

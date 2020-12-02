@@ -463,19 +463,19 @@
             </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Rutas" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exchange"></em>
                      <span class="item-text">Rutas</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formRutas" title="Formulario de registro de Rutas" data-toggle="" class="no-submenu">
                         <span class="item-text">Formulario</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaRuta" title="Listado de Rutas" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
                         <span class="item-text">Listado</span>
                      </a>
@@ -486,21 +486,21 @@
                </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="" title="Forms" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exclamation-circle"></em>
                      <span class="item-text">Observaciones</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
-                        <span class="item-text">Calificaciones</span>
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formObservacion" title="Formulario de socio" data-toggle="" class="no-submenu">
+                        <span class="item-text">Formulario</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaObservacion" title="Formulario de Empleado" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
-                        <span class="item-text">Reclamos</span>
+                        <span class="item-text">Listado</span>
                      </a>
                   </li>
                      
@@ -515,12 +515,12 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaTiempo" title="Formulario de socio" data-toggle="" class="no-submenu">
                         <span class="item-text">Listado</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formTiempo" title="Formulario de Empleado" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
                         <span class="item-text">Formulario</span>
                      </a>

@@ -1,4 +1,4 @@
- <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  ?>
  <section class="wrapper">
    <!-- START Top Navbar-->
@@ -379,7 +379,7 @@
                </li>
                
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
+                  <a href="a" title="Tables" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-users"></em>
                      <span class="item-text">Socios</span>
                   </a>
@@ -463,19 +463,19 @@
             </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="<?php echo base_url(); ?>47admin/#" title="Rutas" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exchange"></em>
                      <span class="item-text">Rutas</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                    <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/formParada" title="Formulario de socio" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/formRutas" title="Formulario de registro de Rutas" data-toggle="" class="no-submenu">
                         <span class="item-text">Formulario</span>
                      </a>
                   </li>
                   <li>
-                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaParada" title="Formulario de Empleado" data-toggle="" class="no-submenu">
+                     <a href="<?php echo base_url(); ?>index.php/usuarios/listaRutas" title="Listado de Rutas" data-toggle="" class="no-submenu">
                         <div class="label label-primary pull-right"></div>
                         <span class="item-text">Listado</span>
                      </a>
@@ -486,7 +486,7 @@
                </li>
 
                <li>
-                  <a href="<?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                  <a href="" title="Forms" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-exclamation-circle"></em>
                      <span class="item-text">Observaciones</span>
                   </a>
@@ -947,10 +947,10 @@
                <div class="col-lg-12">
                   <div class="panel panel-default">
 
-                    <legend><center><h2>Listado de socios activos</h2></center></legend>
+                   <legend><center><h2>Listado de socios activos</h2></center></legend>
 
 
-                    <div class="panel-body">
+                   <div class="panel-body">
                      <table id="datatable1"  class="table table-striped table-hover">
                         <thead>
                            <tr>
@@ -964,8 +964,8 @@
                               
                               <th>Foto</th>
                               <th>Generador</th>
+                              <th>Informes</th>
                               <th>Agregar Vehiculo</th>
-                              <th>Perfil</th>
                               <th>Modificar</th>
                               <th>Desabilitar</th>
                                  <!--<th class="sort-numeric">Engine version</th>
@@ -974,143 +974,142 @@
                               </thead>
                               <tbody>
                                  <div class="panel panel-default panel-demo">
-                     <div class="panel-heading">Codigo QR generado
-                        <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right">
-                           <em class="fa fa-times"></em>
-                        </a>
-                        <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
-                           <em class="fa fa-minus"></em>
-                        </a>
-                        
-                     </div>
-                     <div class="panel-body">
-                        <center><p><?php if(isset($qr_image)){ ?>
-                              <img src="<?php echo base_url(); ?>codigo_qr/temp/<?php echo $qr_image; ?>">
-                              <?php } ?></p></center>
-                     </div>
-                  </div>
+                                    <div class="panel-heading">Codigo QR generado
+                                       <a href="#" data-perform="panel-dismiss" data-toggle="tooltip" title="Close Panel" class="pull-right">
+                                          <em class="fa fa-times"></em>
+                                       </a>
+                                       <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel" class="pull-right">
+                                          <em class="fa fa-minus"></em>
+                                       </a>
+
+                                    </div>
+                                    <div class="panel-body">
+                                       <center><p><?php if(isset($qr_image)){ ?>
+                                          <img src="<?php echo base_url(); ?>codigo_qr/temp/<?php echo $qr_image; ?>">
+                                          <?php } ?></p></center>
+                                       </div>
+                                    </div>
 
 
-                                
 
 
-                                 <?php
-                                 $indice=1;
-                                 foreach ($socio->result() as $row)
-                                 {
+
+                                    <?php
+                                    $indice=1;
+                                    foreach ($socio->result() as $row)
+                                    {
+                                       ?>
+                                       <tr>
+                                          <td><?php echo $indice; ?></td>
+                                          <td><?php echo $row->ci; ?></td>
+                                          <td><?php echo $row->licencia; ?></td>
+                                          <td><?php echo $row->categoria; ?></td>
+                                          <td><?php echo $row->apellidoPaterno; ?>&nbsp;<?php echo $row->apellidoMaterno; ?>&nbsp;<?php echo $row->nombres; ?></td>
+
+
+                                          <td>
+                                           <!-- Contact avatar-->
+                                           <img src="<?php echo base_url() ?>uploads/<?php echo $row->foto; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
+                                        </td>
+                                           <td>
+
+                                             <?php
+                                             $atributos = array('class' => 'form-group');
+                                             echo form_open_multipart('usuarios/generar',$atributos); ?>
+                                             <input type="hidden" name="idSocio" value="<?php echo $row->idSocio ?>">
+                                              <input type="hidden" name="ciS" value="<?php echo $row->ci ?>">
+                                             <input type="hidden" name="apellidoPaterno" value="<?php echo $row->apellidoPaterno ?>">
+
+                                             <button type="submit" class="btn btn-primary btn">Generar QR</button>
+                                             <?php echo form_close(); ?>
+                                          </td> 
+                                          <td>
+                                             <?php
+                                             $atributos = array('class' => 'form-group');
+                                             echo form_open_multipart('usuarios/perfilSocio',$atributos); ?>
+                                             <input type="hidden" name="idSocio" value="<?php echo $row->idSocio; ?>">
+                                             <button type="submit" class="btn btn-primary btn" style="background:#2C7873 ">Informes</button>
+                                             <?php echo form_close(); ?>
+                                          </td> 
+                                          <td>
+
+                                             <a data-target="#myModal" data-toggle="modal" class="btn btn-danger" onclick="pasaridSocio('<?php echo $row->idSocio; ?>')" role="button" style="background:#6FB98F " >Agregar Vehiculo</a>
+
+                                          </td>
+                                          <td>
+                                             <?php
+                                             $atributos = array('class' => 'form-group');
+                                             echo form_open_multipart('usuarios/modificarSocio_contrll',$atributos); ?>
+                                             <input type="hidden" name="id" value="<?php echo $row->idPersona; ?>">
+                                             <button type="submit" class="btn btn-success btn">Modificar</button>
+                                             <?php echo form_close(); ?>
+                                          </td>
+
+                                          <td>
+                                             <?php
+                                             $atributos = array('class' => 'form-group' );
+                                             echo form_open_multipart('usuarios/eliminarlogicobdS',$atributos); ?>
+                                             <input type="hidden" name="id" value="<?php echo $row->idPersona; ?>">
+                                             <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
+                                             <?php echo form_close(); ?>
+                                          </td>
+
+                                       </tr>
+                                       <?php    
+                                       $indice++;
+                                    }
                                     ?>
-                                    <tr>
-                                       <td><?php echo $indice; ?></td>
-                                       <td><?php echo $row->ci; ?></td>
-                                       <td><?php echo $row->licencia; ?></td>
-                                       <td><?php echo $row->categoria; ?></td>
-                                       <td><?php echo $row->apellidoPaterno; ?>&nbsp;<?php echo $row->apellidoMaterno; ?>&nbsp;<?php echo $row->nombres; ?></td>
-                                       
-                                       
-                                       <td>
-                                         <!-- Contact avatar-->
-                                         <img src="<?php echo base_url() ?>uploads/<?php echo $row->foto; ?>" style="width: 40px; height: 40px" alt="Image" class="media-object img-circle">
-
-                                         <td>
-                                          
-                                          <?php
-                                          $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/generar',$atributos); ?>
-                                          <input type="hidden" name="idSocio" value="<?php echo $row->idSocio ?>">
-                                          <input type="hidden" name="ciS" value="<?php echo $row->ci ?>">
-                                          <input type="hidden" name="apellidoPaterno" value="<?php echo $row->apellidoPaterno ?>">
-                                          
-                                          <button type="submit" class="btn btn-primary btn">Generar QR</button>
-                                          <?php echo form_close(); ?>
-                                       </td> 
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/perfilSocio',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idSocio; ?>">
-                                          <button type="submit" class="btn btn-primary btn" style="background:#2C7873 ">Perfil y Vehiculos</button>
-                                          <?php echo form_close(); ?>
-                                       </td> 
-                                       <td>
-
-                                          <a data-target="#myModal" data-toggle="modal" class="btn btn-danger" onclick="pasaridSocio('<?php echo $row->idSocio; ?>')" role="button" style="background:#6FB98F " >Agregar Vehiculo</a>
-
-                                       </td>
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group');
-                                          echo form_open_multipart('usuarios/modificarSocio_contrll',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idPersona; ?>">
-                                          <button type="submit" class="btn btn-success btn">Modificar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
-                                       
-                                       <td>
-                                          <?php
-                                          $atributos = array('class' => 'form-group' );
-                                          echo form_open_multipart('usuarios/eliminarlogicobdS',$atributos); ?>
-                                          <input type="hidden" name="id" value="<?php echo $row->idPersona; ?>">
-                                          <button type="submit" class="btn btn-danger btn" >Desabilitar</button>
-                                          <?php echo form_close(); ?>
-                                       </td>
-
-                                    </tr>
-                                    <?php    
-                                    $indice++;
-                                 }
-                                 ?>
-                              </tbody>
-                           </table>
+                                 </tbody>
+                              </table>
+                           </div>
                         </div>
                      </div>
+                     <div class="panel panel-default">
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+                                 </th>
+                                 <th>
+
+                                    <div class="form-group">
+                                       <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Socio</button>
+                                       </a>
+
+                                    </div>
+                                 </th>
+                                 <th>
+                                    <div class="form-group">
+                                       <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Ver todos los vehiculos</button>
+                                       </a>
+                                    </div>
+                                 </th> 
+                                 <div>
+
+
+                                 </div>
+                                 <th>
+                                    <?php
+                                    $atributos = array('class' => 'form-group', 'id' => 'myform');
+                                    echo form_open_multipart('usuarios/desabilitadosS',$atributos); ?>
+                                    <button type="submit" class="btn btn-success btn" >Socios desabilitados</button>
+                                    <?php echo form_close(); ?>
+                                 </th>
+                              </tr>
+                           </thead>
+                        </table>
+                     </div>   
                   </div>
-                  <div class="panel panel-default">
-                     <table class="table">
-                        <thead>
-                           <tr>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-                              </th>
-                              <th>
-
-                                 <div class="form-group">
-                                    <a href="<?php echo base_url(); ?>index.php/usuarios/formSocio" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Agregar Socio</button>
-                                    </a>
-
-                                 </div>
-                              </th>
-                              <th>
-                           <div class="form-group">
-                                    <a href="<?php echo base_url(); ?>index.php/usuarios/listaVehiculo" title="Extended" data-toggle="" class="no-submenu"><span class="item-text"></span><button type="submit" class="btn btn-success btn">Ver los vehiculos</button>
-                                    </a>
-
-                                 </div>
-                        </th> 
-                        <div>
-
-                           
-   </div>
-             <th>
-               <?php
-               $atributos = array('class' => 'form-group', 'id' => 'myform');
-               echo form_open_multipart('usuarios/desabilitadosS',$atributos); ?>
-               <button type="submit" class="btn btn-success btn" >Socios desabilitados</button>
-               <?php echo form_close(); ?>
-            </th>
-         </tr>
-      </thead>
-   </table>
-</div>   
-</div>
-<!-- END DATATABLE 1 -->
-<!-- START DATATABLE 2 -->
+                  <!-- END DATATABLE 1 -->
+                  <!-- START DATATABLE 2 -->
             <!--<div class="row">
                <div class="col-lg-12">
                   <div class="panel panel-default">
@@ -1155,15 +1154,15 @@
             <?php
             $atributos = array('class' => 'form-group');
             echo form_open_multipart('usuarios/agregarVehiculo',$atributos); ?>
-            <input type="hidden" name="idSocio" id="txtidS">
-            <input type="hidden" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>" >
+            <input type="text" name="idSocio" id="txtidS">
+            <input type="text" name="idEmpleado" value="<?php echo $this->session->userdata('idEmpleado') ?>" >
             <div class="modal-body">
-             <label for="formGroupExampleInput">Placa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="placa" placeholder="Ingrese su numero de placa" maxlength="12"  required>
-             <label for="formGroupExampleInput">Numero de Poliza:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <input type="text" class="form-control bg-light" name="noPoliza" placeholder="Ingrese el numero de poliza" maxlength="20" onkeypress="return soloNumeros(event)" required>
-             <label for="exampleFormControlSelect1">Tipo de vehiculo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
-             <select class="form-control bg-light" id="exampleFormControlSelect1" name="tipo" required>
+              <label for="formGroupExampleInput">Placa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <input type="text" class="form-control bg-light" name="placa" placeholder="Ingrese su numero de placa" maxlength="12"  required>
+              <label for="formGroupExampleInput">Numero de Poliza:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <input type="text" class="form-control bg-light" name="noPoliza" placeholder="Ingrese el numero de poliza" maxlength="20" onkeypress="return soloNumeros(event)" required>
+              <label for="exampleFormControlSelect1">Tipo de vehiculo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>*</code></label>
+              <select class="form-control bg-light" id="exampleFormControlSelect1" name="tipo" required>
                <option value="TRUFI">TRUFI</option>
                <option value="TAXI">TAXI</option>
                <option value="MICROBUS">MICROBUS</option> 
@@ -1188,4 +1187,3 @@
    </div>
 
 </div>
-   
